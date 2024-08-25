@@ -1,0 +1,74 @@
+---
+import Github from "../icons/Github.astro";
+import Twitter from "../icons/Twitter.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Instagram from "../icons/Instagram.astro";
+import Dribbble from "../icons/Dribbble.astro";
+import Portfolio from "../icons/Portfolio.astro";
+import Facebook from "../icons/Facebook.astro";
+import Youtube from "../icons/Youtube.astro";
+import Twitch from "../icons/Twitch.astro";
+import Discord from "../icons/Discord.astro";
+import Reddit from "../icons/Reddit.astro";
+import Tiktok from "../icons/Tiktok.astro";
+import Snapchat from "../icons/Snapchat.astro";
+import Pinterest from "../icons/Pinterest.astro";
+
+interface Props {
+    name: string;
+    url: string;
+}
+
+// Mapeo de nombres a componentes de íconos
+const iconComponents: Record<string, any> = {
+    "Github": Github,
+    "Twitter": Twitter,
+    "LinkedIn": LinkedIn,
+    "Instagram": Instagram,
+    "Dribbble": Dribbble,
+    "Portfolio": Portfolio,
+    "Facebook": Facebook,
+    "Youtube": Youtube,
+    "Twitch": Twitch,
+    "Discord": Discord,
+    "Reddit": Reddit,
+    "Tiktok": Tiktok,
+    "Snapchat": Snapchat,
+    "Pinterest": Pinterest,
+};
+
+// Accede a las propiedades que se pasan al componente
+const {name, url} = Astro.props;
+
+const Icon = iconComponents[name];
+---
+
+<li class={Icon ? '' : 'no-icon'}>
+    {Icon &&
+            <Icon/>}
+    <a href={url}>
+        {name}
+    </a>
+</li>
+
+<style>
+    li {
+        background-color: #2d2d3a;
+        border-radius: 8px;
+        padding: 10px 94px;
+        margin: 12px 0;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    li.no-icon {
+        justify-content: center;
+    }
+
+    a {
+        display: flex;
+        color: #fff;
+        text-decoration: none;
+    }
+</style>

@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import type {GetStaticPaths} from "astro";
+import type {User} from "../types/user"
+import userData from "../data/users.json";
+import Card from "../components/Card.astro";
+
+export const getStaticPaths = (() => {
+    const users: User[] = userData;
+
+    return users.map((user) => {
+
+        if (!user.username || !user.name || !user.bio || !user.avatarUrl || !user.links) {
+            throw new Error(`Faltan datos para el usuario: ${user}`);
+        }
+
+        return {
+            params: {
+                user: user.username
+            },
+            props: {
+                name: user.name,
+                bio: user.bio,
+                avatarUrl: user.avatarUrl,
+                links: user.links
+            }
+        };
+    }).filter(Boolean);
+}) satisfies GetStaticPaths;
+
+const {user} = Astro.params;
+const {name, bio, avatarUrl, links} = Astro.props;
+---
+
+<Layout title={user}>
+    <main>
+        <Card
+                title={name}
+                description={bio}
+                imageUrl={avatarUrl}
+                links={links}
+        />
+    </main>
+</Layout>

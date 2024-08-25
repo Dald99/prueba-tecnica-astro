@@ -1,0 +1,46 @@
+[
+  {
+    "username": "dald99",
+    "name": "Daniel Lara",
+    "bio": "Web Developer",
+    "avatarUrl": "https://scontent.fcxl1-2.fna.fbcdn.net/v/t39.30808-1/323461765_2325295420967161_6039589790384105463_n.jpg?stp=c0.35.780.780a_dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFgvNqKxdlv4lk_mvZujbvDPZydE0pR_rQ9nJ0TSlH-tDJLUF6jDYc6IGCQvdKEWYp4j7SKXVl26H7I9Bqyo4Sp&_nc_ohc=9tsV2THI5u0Q7kNvgEIBgB_&_nc_ht=scontent.fcxl1-2.fna&oh=00_AYAJecjYBowQHwMc7-z8WQt2VA0w-eWtyz4DNvQ7mHpkTQ&oe=66D0120C",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/johndoe"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://linkedin.com/in/johndoe"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://twitter.com/johndoe"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/johndoe"
+      }
+    ]
+  },
+  {
+    "username": "janedoe",
+    "name": "Jane Doe",
+    "bio": "UX Designer",
+    "avatarUrl": "https://unavatar.io/janedoe",
+    "links": [
+      {
+        "name": "Portfolio",
+        "url": "https://janedoe.com"
+      },
+      {
+        "name": "Dribbble",
+        "url": "https://dribbble.com/janedoe"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/janedoe"
+      }
+    ]
+  }
+]
