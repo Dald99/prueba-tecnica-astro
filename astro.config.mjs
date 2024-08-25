@@ -1,4 +1,6 @@
-import { defineConfig } from 'astro/config';
+import {defineConfig} from 'astro/config'
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    site: 'https://dald99.github.io',
+    base: '/prueba-tecnica-astro/',
+})
