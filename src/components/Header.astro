@@ -1,0 +1,75 @@
+---
+---
+
+<header>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search developers..." required/>
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<script>
+    document.getElementById('search-form')!.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const inputElement = document.getElementById('search-input') as HTMLInputElement;
+        const query = inputElement.value;
+        window.location.href = `/${query}`;
+    });
+</script>
+
+<style>
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        z-index: 1000;
+        background-color: #1e1e2e;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #search-form {
+        display: inline-block;
+    }
+
+    #search-input {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #11111b;
+        color: #CDD6F4;
+        border: none;
+        border-radius: 8px;
+    }
+
+    #search-input::placeholder {
+        color: #CDD6F4;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin-left: 10px;
+        background-color: #11111b;
+        color: #CDD6F4;
+        border: none;
+        border-radius: 8px;
+        transition: background-color 0.5s;
+    }
+
+    button:hover {
+        background-color: #2d2d3a;
+        cursor: pointer;
+    }
+
+    @media (width <= 768px) {
+        header {
+            padding: 10px;
+        }
+
+        #search-form {
+            display: block;
+            text-align: center;
+        }
+    }
+</style>

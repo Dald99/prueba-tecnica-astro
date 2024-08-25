@@ -1,50 +1,93 @@
 ---
 import {Image} from 'astro:assets';
 import Pill from "./Pill.astro";
+
 interface Props {
     title: string;
     description: string;
     imageUrl: string;
+    color: string; // Color opcional
     links: { name: string; url: string }[];
 }
 
-const {title, description, imageUrl, links} = Astro.props;
+const {title, description, imageUrl, color, links} = Astro.props;
 ---
 
-<div class="card">
+<div class="card" style={`--hover-color: var(--${color}-color)`}>
     <Image src={imageUrl} alt={title} width="100" height="100"/>
     <div class="card-content">
-        <h2 class="card-title">{title}</h2>
-        <p class="card-description">{description}</p>
-        <ul class="card-links">
+        <h2 class={`card-title ${color}`}>{title}</h2>
+        <h3 class="card-description">{description}</h3>
+        <p class="location">Mexicali, Baja California</p>
+        <nav class="card-links">
             {links.map(link => (
                     <Pill url={link.url} name={link.name}/>
             ))}
-        </ul>
+        </nav>
     </div>
 </div>
 
 <style>
     .card {
-        border: 1px solid #ccc;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 24px 32px;
+        padding: 32px;
         text-align: center;
         background-color: #1e1e2e;
+        --purple-color: #CBA6F7;
+        --blue-color: #89B4FA;
+        --yellow-color: #F9E2AF;
+        --red-color: #F38BA8;
+        --orange-color: #FAB387;
+        --green-color: #A6E3A1;
+        --hover-color: var(--purple-color);
+        margin-top: 7rem;
     }
 
     .card-title {
-        margin: 16px 0;
         font-size: 24px;
     }
 
+    .location {
+        margin: 24px;
+    }
+
     .card-description {
-        margin: 16px 0;
         font-size: 16px;
     }
 
     img {
         border-radius: 50%;
+    }
+
+    .purple {
+        color: var(--purple-color);
+    }
+
+    .blue {
+        color: var(--blue-color);
+    }
+
+    .yellow {
+        color: var(--yellow-color);
+    }
+
+    .red {
+        color: var(--red-color);
+    }
+
+    .orange {
+        color: var(--orange-color);
+    }
+
+    .green {
+        color: var(--green-color);
+    }
+
+    @media (max-width: 768px) {
+        .card {
+            padding: 20px;
+            margin: 5rem auto;
+        }
     }
 </style>

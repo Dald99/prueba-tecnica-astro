@@ -43,32 +43,43 @@ const {name, url} = Astro.props;
 const Icon = iconComponents[name];
 ---
 
-<li class={Icon ? '' : 'no-icon'}>
-    {Icon &&
-            <Icon/>}
-    <a href={url}>
+<a href={url} target="_blank" class="pill-link">
+    <div class={Icon ? '' : 'no-icon'}>
+        {Icon && <Icon />}
         {name}
-    </a>
-</li>
+    </div>
+</a>
 
 <style>
-    li {
-        background-color: #2d2d3a;
+    .pill-link {
+        text-decoration: none;
+    }
+
+    div {
+        background-color: #11111b;
         border-radius: 8px;
-        padding: 10px 94px;
-        margin: 12px 0;
+        padding: 16px 128px;
+        margin: 16px 0;
         display: flex;
         align-items: center;
         gap: 16px;
+        transition: all 0.5s;
+        color: #CDD6F4;
+        font-weight: 500;
     }
 
-    li.no-icon {
+    div:hover {
+        background-color: var(--hover-color);
+        color: #2d2d3a;
+    }
+
+    div.no-icon {
         justify-content: center;
     }
 
-    a {
-        display: flex;
-        color: #fff;
-        text-decoration: none;
+    @media (width <= 768px) {
+        div {
+            padding: 16px 64px;
+        }
     }
 </style>

@@ -1,9 +1,9 @@
-// src/types/user.ts
 export interface User {
     username: string,
     name: string,
     bio: string,
-    avatarUrl: string, // Update to match JSON data
+    avatarUrl: string,
+    color: string,
     links: Link[],
 }
 
