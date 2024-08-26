@@ -9,13 +9,16 @@ export const getStaticPaths = (() => {
     const users: User[] = userData;
 
     return users
-        .filter((user) => user.name && user.bio && user.avatarUrl && user.links) // Filtra usuarios con información completa
+        .filter((user) => user.name && user.bio && user.avatarUrl && user.links && user.location) // Filtra usuarios con
+        // información
+        // completa
         .map((user) => ({
             params: {
                 user: user.username
             },
             props: {
                 name: user.name,
+                location: user.location,
                 bio: user.bio,
                 avatarUrl: user.avatarUrl,
                 links: user.links,
@@ -25,13 +28,14 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 
 const {user} = Astro.params;
-const {name, bio, avatarUrl, color, links} = Astro.props;
+const {name, location, bio, avatarUrl, color, links} = Astro.props;
 ---
 
 <Layout title=`LinkDev | ${user}`>
     <main>
         <Card
                 title={name}
+                location={location}
                 description={bio}
                 imageUrl={avatarUrl}
                 links={links}

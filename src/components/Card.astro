@@ -4,21 +4,22 @@ import Pill from "./Pill.astro";
 
 interface Props {
     title: string;
+    location: string;
     description: string;
     imageUrl: string;
     color: string; // Color opcional
     links: { name: string; url: string }[];
 }
 
-const {title, description, imageUrl, color, links} = Astro.props;
+const {title, location, description, imageUrl, color, links} = Astro.props;
 ---
 
 <div class="card" style={`--hover-color: var(--${color}-color)`}>
-    <Image src={imageUrl} alt={title} width="100" height="100"/>
+    <Image src={imageUrl} alt={title} width="100" height="100" loading="eager"/>
     <div class="card-content">
         <h2 class={`card-title ${color}`}>{title}</h2>
         <h3 class="card-description">{description}</h3>
-        <p class="location">Mexicali, Baja California</p>
+        <p class="location">{location}</p>
         <nav class="card-links">
             {links.map(link => (
                     <Pill url={link.url} name={link.name}/>
@@ -29,6 +30,7 @@ const {title, description, imageUrl, color, links} = Astro.props;
 
 <style>
     .card {
+        border: 1px #3d3d5c solid;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 32px;
@@ -84,10 +86,10 @@ const {title, description, imageUrl, color, links} = Astro.props;
         color: var(--green-color);
     }
 
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
         .card {
             padding: 20px;
-            margin: 5rem auto;
+            margin: 15vh auto;
         }
     }
 </style>

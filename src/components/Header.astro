@@ -27,6 +27,7 @@
         z-index: 1000;
         background-color: #1e1e2e;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px #3d3d5c solid;
     }
 
     #search-form {
@@ -34,11 +35,11 @@
     }
 
     #search-input {
+        border: none;
         padding: 10px;
         font-size: 16px;
         background-color: #11111b;
         color: #CDD6F4;
-        border: none;
         border-radius: 8px;
     }
 
@@ -47,12 +48,12 @@
     }
 
     button {
+        border: 1px #3d3d5c solid;
         padding: 10px 20px;
         font-size: 16px;
         margin-left: 10px;
         background-color: #11111b;
         color: #CDD6F4;
-        border: none;
         border-radius: 8px;
         transition: background-color 0.5s;
     }
@@ -70,6 +71,11 @@
         #search-form {
             display: block;
             text-align: center;
+        }
+
+        #search-input {
+            width: 40%;
+            margin-bottom: 10px;
         }
     }
 </style>
