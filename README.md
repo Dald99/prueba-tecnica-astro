@@ -1,54 +1,144 @@
-# Astro Starter Kit: Basics
+# LinkDev - Prueba técnica con Astro
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Descripción
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+LinkDev es un prototipo de perfil público, similar a Linktree, desarrollado como parte de una prueba técnica para FRQTAL
+utilizando Astro. El proyecto permite a los desarrolladores crear y compartir fácilmente tarjetas personalizadas con sus
+redes sociales y enlaces de interés. Este es un prototipo básico que demuestra las funcionalidades esenciales.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Tabla de Contenidos
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- [GitHub Pages](#github-pages)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Añadir un nuevo perfil](#añadir-un-nuevo-perfil)
+- [Personalización](#personalización)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
 
-## 🚀 Project Structure
+## GitHub Pages
 
-Inside of your Astro project, you'll see the following folders and files:
+El proyecto se encuentra subido a GitHub Pages y puede ser accedido a través del siguiente enlace:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+[https://dald99.github.io/prueba-tecnica-astro/](https://dald99.github.io/prueba-tecnica-astro/)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Instalación
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+Sigue estos pasos para instalar y ejecutar el proyecto localmente:
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. **Clonar el repositorio:**
 
-## 🧞 Commands
+   ```shell
+   git clone https://github.com/Dald99/prueba-tecnica-astro
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. **Navegar al directorio del proyecto:**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```shell
+   cd prueba-tecnica-astro
+   ```
 
-## 👀 Want to learn more?
+3. **Instalar dependencias:**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```shell
+   npm install
+   ```
+
+## Uso
+
+Para iniciar el proyecto en tu máquina local:
+
+1. **Iniciar el servidor de desarrollo:**
+
+    ```shell
+    npm run dev
+    ```
+
+2. **Acceder al proyecto en tu navegador:**
+
+   Abre tu navegador y navega a http://localhost:4321/.
+
+3. **Explorar perfiles existentes:**
+
+   En la página principal, encontrarás un buscador donde podrás escribir el nombre de un perfil para acceder a su
+   página. Para esta demostración, se han incluido los siguientes perfiles:
+
+    - dald99
+    - janedoe
+    - johndoe
+    - karl98
+
+## Añadir un nuevo perfil
+
+1. **Abrir el archivo users.json:**
+
+   Dentro del proyecto, abre el archivo users.json y añade un nuevo objeto con la siguiente estructura:
+
+   ```json
+       {
+     "username": "nombre-de-usuario",
+     "name": "Nombre del usuario",
+     "location": "Ubicación del usuario",
+     "bio": "Descripción del usuario",
+     "avatarUrl": "URL de la imagen",
+     "color": "Color de la tarjeta",
+     "links": [
+       {
+         "name": "Nombre del enlace",
+         "url": "URL del enlace"
+       }
+     ]
+   }
+   ```
+
+2. **Guardar los cambios:**
+
+   Una vez que hayas añadido el nuevo perfil, guarda el archivo y asegúrate de que todos los campos sean completados, ya
+   que son obligatorios. Si falta alguno, el perfil no se mostrará en la aplicación.
+
+## Personalización
+
+### Links Disponibles
+
+Los nombres de enlaces disponibles para las tarjetas son los siguientes. Estos nombres asignan automáticamente el icono
+correspondiente en la tarjeta:
+
+- Github
+- LinkedIn
+- Twitter
+- Instagram
+- Facebook
+- Youtube
+- Tiktok
+- Dribbble
+- Twitch
+- Discord
+- Reddit
+- Snapchat
+- Porfolio
+- Pinterest
+
+### Colores Disponibles
+
+Puedes personalizar el color de la tarjeta utilizando uno de los siguientes nombres de colores (en inglés y minúsculas):
+
+- red
+- blue
+- green
+- yellow
+- purple
+- orange
+
+## Contribución
+
+Directrices para contribuir al proyecto:
+
+1. Hacer un fork del repositorio.
+2. Crear una nueva rama: `git checkout -b feature/nombre-de-tu-feature`
+3. Realizar tus cambios y hacer commit: `git commit -m 'Agregar alguna característica'`
+4. Subir a la rama: `git push origin feature/nombre-de-tu-feature`
+5. Abrir un pull request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT.

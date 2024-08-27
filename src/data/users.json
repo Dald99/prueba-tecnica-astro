@@ -5,27 +5,23 @@
     "location": "Mexicali, Baja California",
     "bio": "Web Developer",
     "avatarUrl": "https://scontent.fcxl1-2.fna.fbcdn.net/v/t39.30808-1/323461765_2325295420967161_6039589790384105463_n.jpg?stp=c0.35.780.780a_dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeFgvNqKxdlv4lk_mvZujbvDPZydE0pR_rQ9nJ0TSlH-tDJLUF6jDYc6IGCQvdKEWYp4j7SKXVl26H7I9Bqyo4Sp&_nc_ohc=9tsV2THI5u0Q7kNvgEIBgB_&_nc_ht=scontent.fcxl1-2.fna&oh=00_AYAJecjYBowQHwMc7-z8WQt2VA0w-eWtyz4DNvQ7mHpkTQ&oe=66D0120C",
-    "color": "yellow",
+    "color": "purple",
     "links": [
       {
-        "name": "Portfolio",
-        "url": "https://dald99.github.io"
-      },
-      {
         "name": "Github",
-        "url": "https://github.com/johndoe"
+        "url": "https://github.com/dald99"
       },
       {
         "name": "LinkedIn",
-        "url": "https://linkedin.com/in/johndoe"
+        "url": "www.linkedin.com/in/daniel-lara-2b5aa728a"
       },
       {
         "name": "Twitter",
-        "url": "https://twitter.com/johndoe"
+        "url": "https://twitter.com/example"
       },
       {
         "name": "Instagram",
-        "url": "https://instagram.com/johndoe"
+        "url": "https://instagram.com/example"
       }
     ]
   },
@@ -48,6 +44,66 @@
       {
         "name": "Instagram",
         "url": "https://instagram.com/janedoe"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "www.linkedin.com/in/jane-doe"
+      },
+      {
+        "name": "Tiktok",
+        "url": "https://tiktok.com/janedoe"
+      }
+    ]
+  },
+  {
+    "username": "johndoe",
+    "name": "John Doe",
+    "location": "New York, New York",
+    "bio": "Product Manager",
+    "avatarUrl": "https://unavatar.io/john",
+    "color": "green",
+    "links": [
+      {
+        "name": "LinkedIn",
+        "url": "www.linkedin.com/in/john-doe"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://twitter.com/johndoe"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/johndoe"
+      }
+    ]
+  },
+  {
+    "username": "karl98",
+    "name": "Karl",
+    "location": "San Diego, California",
+    "bio": "Frontend Developer",
+    "avatarUrl": "https://unavatar.io/karl98",
+    "color": "red",
+    "links": [
+      {
+        "name": "Github",
+        "url": "https://github.com/karl98"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "www.linkedin.com/in/karl"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://twitter.com/karl"
+      },
+      {
+        "name": "Instagram",
+        "url": "https://instagram.com/karl"
+      },
+      {
+        "name": "Portfolio",
+        "url": "https://karl.com"
       }
     ]
   }

@@ -40,9 +40,11 @@ const iconComponents: Record<string, any> = {
 // Accede a las propiedades que se pasan al componente
 const {name, url} = Astro.props;
 
+// Obtiene el componente de ícono correspondiente
 const Icon = iconComponents[name];
 ---
 
+<!-- Componente de enlace con ícono -->
 <a href={url} target="_blank" class="pill-link">
     <div class={Icon ? '' : 'no-icon'}>
         {Icon && <Icon />}
@@ -64,7 +66,7 @@ const Icon = iconComponents[name];
         display: flex;
         align-items: center;
         gap: 16px;
-        transition: all 0.5s;
+        transition: all 0.3s;
         color: #CDD6F4;
         font-weight: 500;
     }

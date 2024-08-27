@@ -4,6 +4,7 @@ interface Props {
     title: string;
 }
 
+// Accede a las propiedades que se pasan al layout
 const {title} = Astro.props;
 ---
 
@@ -18,7 +19,9 @@ const {title} = Astro.props;
     <title>{title}</title>
 </head>
 <body>
+    <!-- Encabezado de la página -->
     <Header/>
+    <!-- Contenido de la página -->
     <slot/>
 </body>
 </html>

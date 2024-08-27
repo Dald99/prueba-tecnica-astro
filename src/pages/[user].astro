@@ -5,13 +5,12 @@ import type {User} from "../types/user"
 import userData from "../data/users.json";
 import Card from "../components/Card.astro";
 
+// Define las rutas estáticas para los usuarios
 export const getStaticPaths = (() => {
     const users: User[] = userData;
 
     return users
-        .filter((user) => user.name && user.bio && user.avatarUrl && user.links && user.location) // Filtra usuarios con
-        // información
-        // completa
+        .filter((user) => user.name && user.bio && user.avatarUrl && user.links && user.location)
         .map((user) => ({
             params: {
                 user: user.username
@@ -27,12 +26,15 @@ export const getStaticPaths = (() => {
         }));
 }) satisfies GetStaticPaths;
 
+// Accede a los parámetros y propiedades del usuario
 const {user} = Astro.params;
 const {name, location, bio, avatarUrl, color, links} = Astro.props;
 ---
 
+<!-- Página de perfil de usuario -->
 <Layout title=`LinkDev | ${user}`>
     <main>
+        <!-- Tarjeta de perfil del usuario -->
         <Card
                 title={name}
                 location={location}
