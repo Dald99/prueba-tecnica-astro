@@ -56,7 +56,7 @@ Para iniciar el proyecto en tu máquina local:
 
 2. **Acceder al proyecto en tu navegador:**
 
-   Abre tu navegador y navega a http://localhost:4321/.
+   Abre tu navegador y navega a http://localhost:4321/prueba-tecnica-astro/.
 
 3. **Explorar perfiles existentes:**
 
