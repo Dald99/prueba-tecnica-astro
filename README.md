@@ -6,6 +6,16 @@ LinkDev es un prototipo de perfil público, similar a Linktree, desarrollado com
 utilizando Astro. El proyecto permite a los desarrolladores crear y compartir fácilmente tarjetas personalizadas con sus
 redes sociales y enlaces de interés. Este es un prototipo básico que demuestra las funcionalidades esenciales.
 
+## Tecnologías Utilizadas
+
+Este proyecto fue desarrollado utilizando las siguientes tecnologías:
+
+- **[Astro](https://astro.build/):** Framework de desarrollo web estático moderno.
+- **[TypeScript](https://www.typescriptlang.org/):** Lenguaje de programación tipado, usado para mejorar la robustez y mantenibilidad del código.
+- **[Node.js](https://nodejs.org/):** Entorno de ejecución para JavaScript en el servidor.
+- **[CSS](https://developer.mozilla.org/es/docs/Web/CSS):** Utilizado para el diseño y el estilo de las páginas.
+- **[GitHub Actions](https://github.com/features/actions):** Para la automatización de despliegue.
+
 ## Tabla de Contenidos
 
 - [GitHub Pages](#github-pages)
